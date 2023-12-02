@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background-image: url(/img/imager_4341.jpg);
+    background-size: cover;
+}
+
+.box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(0deg);
+    -webkit-transform: perspective(1000px) rotateY(0deg);
+    -moz-transform: perspective(1000px) rotateY(0deg);
+    -ms-transform: perspective(1000px) rotateY(0deg);
+    -o-transform: perspective(1000px) rotateY(0deg);
+}
+
+.box span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(400px);
+    -webkit-transform: rotateY(calc(var(--i)*45deg)) translateZ(400px);
+    -moz-transform: rotateY(calc(var(--i)*45deg)) translateZ(400px);
+    -ms-transform: rotateY(calc(var(--i)*45deg)) translateZ(400px);
+    -o-transform: rotateY(calc(var(--i)*45deg)) translateZ(400px);
+}
+
+.box span img {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.button {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 20px;
+    /* Adjust as needed */
+}
+
+.button button {
+    display: inline-block;
+}
+
+.button a {
+    color: rgb(255, 0, 8);
+    text-decoration-line: none;
+    -moz-text-decoration-line: none;
+}
+
+@keyframes glow {
+    0%,
+    100% {
+        color: #fff;
+        text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+    }
+    10%,
+    90% {
+        color: #111;
+        text-shadow: none;
+    }
+}
+
+.greetings {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 60px;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.greetings>span {
+    animation: glow 2.5s ease-in-out infinite;
+}
+
+.greetings>span:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.greetings>span:nth-child(3) {
+    animation-delay: .4s;
+}
+
+.greetings>span:nth-child(4) {
+    animation-delay: .6s;
+}
+
+.greetings>span:nth-child(5) {
+    animation-delay: .8s;
+}
+
+.greetings>span:nth-child(6) {
+    animation-delay: 1s;
+}
+
+.greetings>span:nth-child(7) {
+    animation-delay: 1.2s;
+}
+
+@media screen and (max-width:574px) {
+    .greetings {
+        display: block;
+        font-size: 3rem;
+        font-weight: 500;
+        text-align: center;
+    }
+}
+
+.Pv {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 90px;
+}
+
+.Pv p {
+    font-size: 1rem;
+    display: inline-block;
+    font-weight: 500;
+    color: rgb(1, 21, 5);
+    text-align: center;
+    text-transform: uppercase;
+}
